@@ -33,5 +33,24 @@ getElement("card_button").addEventListener("click", function (e) {
 
     alert(`Calling ${callData.name} ${callData.number}`) ;
     getElement("Coin").innerText = callAvailableBalance ;
+
+    const dynamicWay = {
+      name: serviceName ,
+      number: serviceNumber ,
+      time: new Date().toLocaleTimeString() ,
+    };
+
+    const callHistory = cart_btn.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[3].childNodes[3].childNodes[3].childNodes[1].childNodes[3] ;
+
+    const cartContainer = document.createElement("div") ;
+    cartContainer.innerHTML = `
+           <div class="flex md:flex-row flex-col md:gap-2.5 gap-2 md:justify-between md:items-center p-2 bg-[#FAFAFA]  rounded-xl mb-3 Madurai">
+           <div class="text-lg">
+           <h1 class="Inter font-semibold tracking-tight">${dynamicWay.name}</h1>
+           <p class="text-[#5C5C5C]">${dynamicWay.number}</p>
+           </div>
+           <h1>${dynamicWay.time}</h1>
+           </div>`;
+    callHistory.append(cartContainer) ;
   }
 });
