@@ -53,4 +53,14 @@ getElement("card_button").addEventListener("click", function (e) {
            </div>`;
     callHistory.append(cartContainer) ;
   }
+
+  // Heart Count functionality
+
+  if (e.target.className.includes("heart_count")) {
+    const cart_btn2 = e.target ;
+    const countHeart = cart_btn2.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[1].childNodes[1].innerText ;
+    
+    const countIncrease = Number(countHeart) + 1 ;
+    getElement("heart_counted").innerText = countIncrease ;
+  }
 });
