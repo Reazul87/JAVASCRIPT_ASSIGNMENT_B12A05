@@ -63,4 +63,17 @@ getElement("card_button").addEventListener("click", function (e) {
     const countIncrease = Number(countHeart) + 1 ;
     getElement("heart_counted").innerText = countIncrease ;
   }
+
+  // Copy Count functionality
+
+  if (e.target.className.includes("copy_btn")) {
+    const cart_btn3 = e.target ;
+    const serviceNumber = cart_btn3.parentNode.parentNode.childNodes[5].innerText ;
+    const countCopy = cart_btn3.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.parentNode.childNodes[1].childNodes[3].childNodes[5]
+    .childNodes[1].innerText ;
+
+    const copyIncrease = Number(countCopy) + 1 ;
+    getElement("copy_counted").innerText = copyIncrease ;
+
+  }
 });
