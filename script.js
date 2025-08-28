@@ -74,6 +74,9 @@ getElement("card_button").addEventListener("click", function (e) {
 
     const copyIncrease = Number(countCopy) + 1 ;
     getElement("copy_counted").innerText = copyIncrease ;
-
+    
+    const copyAbleText = cart_btn3.parentNode.parentNode.childNodes[5].innerText ;
+    navigator.clipboard.writeText(copyAbleText) ;
+    alert(`The number has been copied : ${serviceNumber}`) ;
   }
 });
