@@ -80,3 +80,11 @@ getElement("card_button").addEventListener("click", function (e) {
     alert(`The number has been copied : ${serviceNumber}`) ;
   }
 });
+
+// Clear functionality
+
+document.getElementById("clear_btn").addEventListener("click",function (e) {
+  e.preventDefault() ;
+  const callHistoryParent = document.querySelector(".parent") ;   
+  callHistoryParent.innerText = "" ;
+});
