@@ -44,7 +44,7 @@ getElement("card_button").addEventListener("click", function (e) {
 
     const cartContainer = document.createElement("div") ;
     cartContainer.innerHTML = `
-           <div class="flex md:flex-row flex-col md:gap-2.5 gap-2 md:justify-between md:items-center p-2 bg-[#FAFAFA]  rounded-xl mb-3 Madurai">
+           <div class="flex flex-row md:gap-2.5 gap-2 justify-between items-center p-2 bg-[#FAFAFA]  rounded-xl mb-3 Madurai">
            <div class="text-lg">
            <h1 class="Inter font-semibold tracking-tight">${dynamicWay.name}</h1>
            <p class="text-[#5C5C5C]">${dynamicWay.number}</p>
